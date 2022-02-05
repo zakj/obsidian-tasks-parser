@@ -1,9 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@typescript-eslint/eslint-plugin': ^5.10.2
-  '@typescript-eslint/parser': ^5.10.2
-  '@zakj/eslint-config': ^1.0.0
+  '@zakj/eslint-config': ^2.0.0
   '@zakj/prettier-config': ^1.0.0
   esbuild: ^0.14.18
   esbuild-register: ^3.3.2
@@ -15,9 +13,7 @@ specifiers:
   uvu: ^0.5.3
 
 devDependencies:
-  '@typescript-eslint/eslint-plugin': 5.10.2_2595c2126aec4d4b6e944b931dabb4c2
-  '@typescript-eslint/parser': 5.10.2_eslint@8.8.0+typescript@4.5.5
-  '@zakj/eslint-config': 1.0.0_eslint@8.8.0
+  '@zakj/eslint-config': 2.0.0_eslint@8.8.0+typescript@4.5.5
   '@zakj/prettier-config': 1.0.0_prettier@2.5.1
   esbuild: 0.14.18
   esbuild-register: 3.3.2_esbuild@0.14.18
@@ -221,12 +217,17 @@ packages:
       eslint-visitor-keys: 3.2.0
     dev: true
 
-  /@zakj/eslint-config/1.0.0_eslint@8.8.0:
-    resolution: {integrity: sha512-6ghRvh1npW3ur1tbhft0BYhuXyrZOwRLMDSIqdQ0HM9nr5ogymhoueujJ0y3nFJSrPIRrEL1S2UeVvZqK4sQXg==}
+  /@zakj/eslint-config/2.0.0_eslint@8.8.0+typescript@4.5.5:
+    resolution: {integrity: sha512-XuH2FFvYy7qU2Ho9LwONbw40PIBSahtmRCbIKK3DQKt3KunqOg298XhQpCXfwRuiW1WvoyUDV6D+VCc9rSiw7w==}
     peerDependencies:
       eslint: '>= 6'
     dependencies:
+      '@typescript-eslint/eslint-plugin': 5.10.2_2595c2126aec4d4b6e944b931dabb4c2
+      '@typescript-eslint/parser': 5.10.2_eslint@8.8.0+typescript@4.5.5
       eslint: 8.8.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /@zakj/prettier-config/1.0.0_prettier@2.5.1:
@@ -867,6 +868,17 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /glob/7.2.0:
+    resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.0.4
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: true
+
   /globals/13.12.1:
     resolution: {integrity: sha512-317dFlgY2pdJZ9rspXDks7073GpDmXdfbM3vYYp0HAMKGDh1FfWPleI2ljVNLQX5M5lXcAslTcPTrOrMEFOjyw==}
     engines: {node: '>=8'}
@@ -1221,7 +1233,7 @@ packages:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
     dependencies:
-      glob: 7.1.6
+      glob: 7.2.0
     dev: true
 
   /rollup/2.67.0:

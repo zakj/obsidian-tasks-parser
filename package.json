@@ -26,14 +26,7 @@
       "es2020": true,
       "node": true
     },
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "@zakj",
-      "plugin:@typescript-eslint/recommended"
-    ]
+    "extends": "@zakj"
   },
   "prettier": "@zakj/prettier-config",
   "tsup": {
@@ -48,9 +41,7 @@
     "sourcemap": true
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
-    "@zakj/eslint-config": "^1.0.0",
+    "@zakj/eslint-config": "^2.0.0",
     "@zakj/prettier-config": "^1.0.0",
     "esbuild": "^0.14.18",
     "esbuild-register": "^3.3.2",
