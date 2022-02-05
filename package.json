@@ -1,6 +1,6 @@
 {
   "name": "obsidian-tasks-parser",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "A parser for Markdown checklists compatible with Obsidian Tasks",
   "author": "Zak Johnson <me@zakj.net> (https://zakj.net/)",
   "repository": "https://github.com/zakj/obsidian-tasks-parser.git",
