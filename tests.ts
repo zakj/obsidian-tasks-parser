@@ -13,6 +13,17 @@ parseDocument('multiple tasks', () => {
   assert.is(doc(document).length, 2);
 });
 
+parseDocument('alternate list prefix', () => {
+  const document = `
+- [ ] one
+- [ ] two
+* [ ] three
+* [ ] four
+. [ ] not a task
+`;
+  assert.is(doc(document, ' ').length, 4);
+});
+
 parseDocument('indented tasks', () => {
   const document = `
   - [ ] one
@@ -58,6 +69,11 @@ parseLine('indentation', () => {
 parseLine('indentation must be whitespace', () => {
   assert.not(line('a- [ ] a'));
   assert.not(line('\n- [ ] a'));
+});
+
+parseLine('alternate prefix', () => {
+  assert.is(line('* [ ] a').statusChar, ' ');
+  assert.not(line('. [ ] a'));
 });
 
 parseLine('statusChar', () => {

@@ -37,7 +37,7 @@ const dateTypes = new Map([
 ]);
 const dateFlags = [...dateTypes.keys()].join('');
 
-const taskRe = /^([ \t]*)- +\[(.)\] *(.*)$/u;
+const taskRe = /^([ \t]*)[-*] +\[(.)\] *(.*)$/u;
 const priorityRe = new RegExp(` *([${priorityFlags}])`, 'u');
 const dateRe = new RegExp(
   String.raw` *(?<type>[${dateFlags}]) *(?<date>\d\d\d\d-\d\d-\d\d)`,
@@ -48,7 +48,7 @@ const blockLinkRe = / *(\^[a-zA-Z0-9-]+)/u;
 
 export function parseDocument(doc: string, statusFilter = '.'): ObsidianTask[] {
   const allTasksRe = new RegExp(
-    String.raw`^[ \t]*- +\[${statusFilter}\].*$`,
+    String.raw`^[ \t]*[-*] +\[${statusFilter}\].*$`,
     'gmu'
   );
   return [...doc.matchAll(allTasksRe)].map((match) => parseLine(match[0]));
